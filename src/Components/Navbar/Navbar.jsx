@@ -16,7 +16,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Log Out</a>
+                    <a className="btn hover:bg-slate-300 hover:text-black">Log Out</a>
                 </div>
             </div>
         </nav>
