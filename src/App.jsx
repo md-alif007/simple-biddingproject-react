@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Cards from './Components/Cards/Cards'
@@ -5,7 +6,13 @@ import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
+  const [bidNow, setBidNow] = useState([]);
 
+  const handleBidNow = (card) => {
+    const newBidNow = [...bidNow, card];
+    setBidNow(newBidNow);
+  }
+  
   return (
     <>
 
@@ -19,12 +26,18 @@ function App() {
             <h1 className='text-xl font-bold mb-2'>Active Auctions</h1>
             <p className='text-slate-700 mb-6'>Discover and bid on extraordinary items</p>
             <div className='bg-[#FFFFFF] rounded-xl p-5'>
-              <Cards></Cards>
+              <Cards handleBidNow={handleBidNow}></Cards>
             </div>
 
           </div>
-          <div className="favorite-auction-list-container border w-[30%] h-[50vh] mt-21">
-            <h2>fav</h2>
+          <div className="favorite-auction-list-container w-[30%] h-[50vh] mt-22 bg-[#FFFFFF] rounded-md ">
+            <h1 className='text-center font-semibold p-1 border-b border-slate-300'>Favourite Item</h1>
+            {/* <div>
+              {
+                bidNow.map((bid)=><p key={bid.id}>{bid.item}</p>)
+              }
+            </div> */}
+            <h1 className='text-center font-semibold p-1' >Total Bid ammount : </h1>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ card }) => {
+const Card = ({ card, handleBidNow }) => {
     return (
         <div >
             <div className="card bg-base-100 image-full">
@@ -14,7 +14,10 @@ const Card = ({ card }) => {
                     <h2 className='font-semibold'>Current Bid : {card.currentBid}</h2>
                     <h2 className='font-semibold'>Time left   : {card.timeLeft}</h2>
                     <div className="card-actions justify-end">
-                        <button className="btn hover:bg-slate-300 hover:text-black">Bid Now</button>
+                        <button onClick={() => handleBidNow()}
+                            className="btn hover:bg-slate-300 hover:text-black">
+                            Bid Now
+                        </button>
                     </div>
                 </div>
             </div>
