@@ -1,0 +1,37 @@
+[
+  {
+    "id": "A001",
+    "item": "Vintage Leica M3 Camera",
+    "currentBid": "$2300",
+    "timeLeft": "2 days left",
+    "img": "https://i.ibb.co.com/qLfvCft4/Bid1-min.png"
+  },
+  {
+    "id": "A002",
+    "item": "1965 Gibson SG Standard Electric Guitar",
+    "currentBid": "$7800",
+    "timeLeft": "5 days left",
+    "img": "https://i.ibb.co.com/zHRmRSn4/Bid2-min.png"
+  },
+  {
+    "id": "A003",
+    "item": "Original Apple Macintosh 128K (1984)",
+    "currentBid": "$1500",
+    "timeLeft": "3 days left",
+    "img": "https://i.ibb.co.com/F4P557rw/Bid3-min.png"
+  },
+  {
+    "id": "A004",
+    "item": "Rolex Submariner 16610",
+    "currentBid": "$9200",
+    "timeLeft": "12 hours left",
+    "img": "https://i.ibb.co.com/VYrVKG50/Bid4-min.png"
+  },
+  {
+    "id": "A005",
+    "item": "Banksy Original Screen Print",
+    "currentBid": "$18500",
+    "timeLeft": "1 day left",
+    "img": "https://i.ibb.co.com/chFLvBHX/Bid7-min.png"
+  }
+]
