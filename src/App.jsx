@@ -12,7 +12,14 @@ function App() {
     const newBidNow = [...bidNow, card];
     setBidNow(newBidNow);
   }
-  
+
+  const [totalBidMoney , setTotalBidMoney] = useState(0);
+
+  const handleBidMoney = (money) => {
+    const newTotalBidMoney = totalBidMoney+money;
+    setTotalBidMoney(newTotalBidMoney);
+  }
+
   return (
     <>
 
@@ -26,18 +33,24 @@ function App() {
             <h1 className='text-xl font-bold mb-2'>Active Auctions</h1>
             <p className='text-slate-700 mb-6'>Discover and bid on extraordinary items</p>
             <div className='bg-[#FFFFFF] rounded-xl p-5'>
-              <Cards handleBidNow={handleBidNow}></Cards>
+              <Cards handleBidNow={handleBidNow} handleBidMoney={handleBidMoney}></Cards>
             </div>
 
           </div>
-          <div className="favorite-auction-list-container w-[30%] h-[50vh] mt-22 bg-[#FFFFFF] rounded-md ">
-            <h1 className='text-center font-semibold p-1 border-b border-slate-300'>Favourite Item</h1>
-            {/* <div>
+          <div className="favorite-auction-list-container w-[30%] p-2 mt-22 bg-[#FFFFFF] rounded-md ">
+            <h1 className='text-center font-semibold p-1 border-b-2 mb-2 border-slate-300'>Favourite Item</h1>
+            <div>
               {
-                bidNow.map((bid)=><p key={bid.id}>{bid.item}</p>)
+                bidNow.map((bid) =>
+                  <p className='border rounded-md mb-1 p-2'
+                    key={bid.id}>
+                    Item   : {bid.item} <br />
+                    Amount : {bid.currentBid} <br />
+                    Time left : {bid.timeLeft}
+                  </p>)
               }
-            </div> */}
-            <h1 className='text-center font-semibold p-1' >Total Bid ammount : </h1>
+            </div>
+            <h1 className='text-center font-semibold p-1' >Total Bid ammount : {totalBidMoney}</h1>
           </div>
         </div>
       </div>
