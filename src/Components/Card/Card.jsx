@@ -7,7 +7,7 @@ const Card = ({ card, handleBidNow, handleBidMoney }) => {
     return (
         <div >
             <div className="card bg-base-100 image-full">
-                <figure>
+                <figure className='w-full h-60 object-cover'>
                     <img
                         src={card.img}
                         alt="" />
@@ -16,7 +16,7 @@ const Card = ({ card, handleBidNow, handleBidMoney }) => {
                     <h2 className="card-title">{card.item}</h2>
                     <h2 className='font-semibold'>Current Bid : {card.currentBid}</h2>
                     <h2 className='font-semibold'>Time left   : {card.timeLeft}</h2>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-end mt-auto">
                         <button
                             disabled={clicked}
                             onClick={() => {
