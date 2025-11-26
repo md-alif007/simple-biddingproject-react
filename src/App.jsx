@@ -3,6 +3,7 @@ import './App.css'
 import Banner from './Components/Banner/Banner'
 import Cards from './Components/Cards/Cards'
 import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
         </div>
       </div>
 
+      <Footer></Footer>
     </>
   )
 }
