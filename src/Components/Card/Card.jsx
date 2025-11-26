@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Card = ({ card, handleBidNow, handleBidMoney }) => {
+
+    const [clicked, setClicked] = useState(false);
+
     return (
         <div >
             <div className="card bg-base-100 image-full">
@@ -15,12 +18,15 @@ const Card = ({ card, handleBidNow, handleBidMoney }) => {
                     <h2 className='font-semibold'>Time left   : {card.timeLeft}</h2>
                     <div className="card-actions justify-end">
                         <button
+                            disabled={clicked}
                             onClick={() => {
                                 handleBidNow(card);
                                 handleBidMoney(card.currentBid);
+                                setClicked(true);
                             }}
-                            className="btn hover:bg-slate-300 hover:text-black">
-                            Bid Now
+                            className="btn hover:bg-slate-300 hover:text-black"
+                        >
+                            {clicked ? "Bidded" : "Bid Now"}
                         </button>
                     </div>
                 </div>

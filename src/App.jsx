@@ -13,10 +13,10 @@ function App() {
     setBidNow(newBidNow);
   }
 
-  const [totalBidMoney , setTotalBidMoney] = useState(0);
+  const [totalBidMoney, setTotalBidMoney] = useState(0);
 
   const handleBidMoney = (money) => {
-    const newTotalBidMoney = totalBidMoney+money;
+    const newTotalBidMoney = totalBidMoney + money;
     setTotalBidMoney(newTotalBidMoney);
   }
 
@@ -50,7 +50,7 @@ function App() {
                   </p>)
               }
             </div>
-            <h1 className='text-center font-semibold p-1' >Total Bid ammount : {totalBidMoney}</h1>
+            <h1 className='text-center font-semibold p-1' >Total Bid ammount : {totalBidMoney}$</h1>
           </div>
         </div>
       </div>
